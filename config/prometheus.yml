@@ -1,0 +1,31 @@
+global:
+  scrape_interval:     30s
+  evaluation_interval: 30s
+
+scrape_configs:
+  - job_name: 'prometheus_self'
+    static_configs:
+      - targets: ['localhost:9090']
+
+
+################## Example Metrics #######################
+
+  # - job_name: 'gonzales_activemq'
+  #   scrape_interval: 35s
+  #   scrape_timeout: 30s
+  #   static_configs:
+  #   - targets: [
+
+  #     'target_01:1234',
+
+  #     'target_01:1234',
+
+  #     ]
+
+  #     labels:
+  #       example_label: 'label_01'
+  #       example_label: 'label_01'
+
+  #   relabel_configs:
+  #   - source_labels: [__address__]
+  #     target_label: relabel_address_label
